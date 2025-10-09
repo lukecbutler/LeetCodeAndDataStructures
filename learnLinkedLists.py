@@ -85,4 +85,4 @@ ll.add_node_back(4)
 
 
 #3. Call the traverse method on the object(print entire list)
-print(ll.find_middle())
+print(ll.traverse_list)
