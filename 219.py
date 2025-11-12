@@ -16,7 +16,8 @@ Input: nums = [1,2,3,1,2,3], k = 2
 Output: false
 '''
 
-def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+def containsNearbyDuplicate(nums: list[int], k: int) -> bool:
+    lastestSeen = {}
     return True
 
 
