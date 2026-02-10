@@ -12,10 +12,12 @@ Value: The index where we found it.
 '''
 
 def twoSums(nums, target):
-    previously_seen = []
+    previously_seen = {} # key = index | value = element
+    target
 
     for i in range(len(nums)):
-        
+        complement = 
+
 
 nums = [2, 7, 11]
 target = 9
