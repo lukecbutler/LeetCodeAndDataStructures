@@ -20,9 +20,9 @@ def twoSums(nums, target):
         print(complement)
 
         if complement in index_map:
-            return [index_map.values(complement), current_num]
+            return [index_map[complement], i]
         else:
-            index_map[i] = nums[i]
+            index_map[nums[i]] = i
 
 
 nums = [2, 7, 11, 15]
