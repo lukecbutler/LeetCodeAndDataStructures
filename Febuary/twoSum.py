@@ -12,19 +12,10 @@ Value: The index where we found it.
 '''
 
 def twoSums(nums, target):
-    frequency_map = {}
+    previously_seen = []
 
-    for i in range(len(nums)): # make frequency map
-        frequency_map[nums[i]] = i
-
-    for i in frequency_map:
-        for j in frequency_map:
-            if i + j == target:
-                firstValue = frequency_map[i]
-                secondValue = frequency_map[j]
-                return [firstValue, secondValue]
-
-    return False # return false if no indices add up to target
+    for i in range(len(nums)):
+        
 
 nums = [2, 7, 11]
 target = 9

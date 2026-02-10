@@ -9,22 +9,17 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 '''
 
 # check for two indices adding to the target value, while builing the seen map
-# hashmap construction: key = index ; value = element ; ex. {2:0}, where 2 is the element & 0 is the index
-# 
+# hashmap construction: key = element ; value = index ; ex. {2:0}, where 2 is the element & 0 is the index
+
 def twoSum(nums, target):
-
-    index_map = {}
-
     for i in range(len(nums)):
-        current_num = nums[i]
-        complement = target - current_num
-
-        if complement in index_map:
-            return [index_map[complement], i]
-        
-        index_map[current_num] = i
+        for j in range(1,len(nums)):
+            if nums[i] + nums[j] == target and i!=j:
+                return [i,j]
 
 
-nums = [2, 7, 11]
+
+
+nums = [2, 7, 11, 15]
 target = 9
 print(twoSum(nums=nums, target=target))
