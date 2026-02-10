@@ -12,14 +12,20 @@ Value: The index where we found it.
 '''
 
 def twoSums(nums, target):
-    previously_seen = {} # key = index | value = element
-    target
+    index_map = {}
 
     for i in range(len(nums)):
-        complement = 
+        current_num = nums[i]
+        complement = target-current_num
+        print(complement)
+
+        if complement in index_map:
+            return [index_map.values(complement), current_num]
+        else:
+            index_map[i] = nums[i]
 
 
-nums = [2, 7, 11]
+nums = [2, 7, 11, 15]
 target = 9
 
 print(twoSums(nums=nums, target=target))
